@@ -1,0 +1,37 @@
+name: python27
+channels:
+  - defaults
+dependencies:
+  - ca-certificates=2021.1.19=hecd8cb5_0
+  - certifi=2020.6.20=pyhd3eb1b0_3
+  - libcxx=10.0.0=1
+  - libedit=3.1.20191231=h1de35cc_1
+  - libffi=3.2.1=h0a44026_1007
+  - ncurses=6.2=h0a44026_1
+  - pip=19.3.1=py27_0
+  - python=2.7.16=h97142e2_7
+  - readline=7.0=h1de35cc_5
+  - setuptools=44.0.0=py27_0
+  - sqlite=3.33.0=hffcf06c_0
+  - tk=8.6.10=hb0a8c7a_0
+  - wheel=0.36.2=pyhd3eb1b0_0
+  - zlib=1.2.11=h1de35cc_3
+  - pip:
+    - backports-weakref==1.0.post1
+    - bleach==1.5.0
+    - enum34==1.1.10
+    - funcsigs==1.0.2
+    - futures==3.3.0
+    - html5lib==0.9999999
+    - keras==2.0.8
+    - markdown==3.1.1
+    - mock==3.0.5
+    - numpy==1.16.6
+    - protobuf==3.17.3
+    - pyyaml==5.4.1
+    - scipy==1.2.3
+    - six==1.16.0
+    - tensorflow==1.4.0
+    - tensorflow-tensorboard==0.4.0
+    - werkzeug==1.0.1
+prefix: /Users/changlian.tan/opt/anaconda3/envs/python27
