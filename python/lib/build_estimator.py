@@ -78,6 +78,7 @@ def _build_model_columns():
     deep_dim = 0
     for feature, conf in feature_conf_dic.items():
         f_type, f_tran, f_param = conf["type"], conf["transform"], conf["parameter"]
+        print(feature, conf)
         if f_type == 'category':
 
             if f_tran == 'hash_bucket':

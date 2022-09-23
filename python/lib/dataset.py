@@ -82,6 +82,7 @@ class _CsvDataset(_CTRDataset):
         self._feature_unused = self._conf.get_feature_name('unused')  # unused features
         self._feature_conf = self._conf.read_feature_conf()  # feature conf dict
         self._csv_defaults = self._column_to_csv_defaults()
+        print("self._csv_defaults", self._csv_defaults)
 
     def _column_to_csv_defaults(self):
         """parse columns to record_defaults param in tf.decode_csv func
@@ -179,7 +180,8 @@ class _CsvDataset(_CTRDataset):
             self._parse_csv(is_pred=(mode == 'pred')),
             num_parallel_calls=self._num_parallel_calls)
         if mode == 'train':
-            dataset = dataset.shuffle(buffer_size=self._shuffle_buffer_size, seed=123)
+            # dataset = dataset.shuffle(buffer_size=self._shuffle_buffer_size, seed=123)
+            pass
             # dataset = dataset.repeat(self._train_epochs)  # define outside loop
 
         dataset = dataset.prefetch(2 * batch_size)
@@ -341,8 +343,10 @@ if __name__ == '__main__':
     img_path = '../../data/image/train.tfrecords'
     _input_tensor_test(csv_path)
     sess = tf.InteractiveSession()
-    data = input_fn(csv_path, img_path, 'train', 5)
-    print(sess.run(data))
+    # data = input_fn(csv_path, img_path, 'train', 5)
+    data = input_fn(csv_path, None, 'train', 5)
+    print(">"*20)
+    print(sess.run(data)[1])
 
 
 
